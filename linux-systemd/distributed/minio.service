@@ -8,8 +8,8 @@ AssertFileIsExecutable=/usr/local/bin/minio
 [Service]
 WorkingDirectory=/usr/local
 
-User=minio-user
-Group=minio-user
+# User=minio-user
+# Group=minio-user
 
 EnvironmentFile=-/etc/default/minio
 ExecStartPre=/bin/bash -c "if [ -z \"${MINIO_VOLUMES}\" ]; then echo \"Variable MINIO_VOLUMES not set in /etc/default/minio\"; exit 1; fi"
